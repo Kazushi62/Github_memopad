@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/stylesheet2.css">
+  <title>Select user</title>
+</head>
+<body>
+  <header>
+    <h1 class="text-center">please select user</h1>
+    <p class="text-center">who are you?</p>
+  </header>
+
+  <main>
+    <div class="main_first">
+      <div class="main_img">
+        <img src="../img/Select_User_画像.jpg" alt="ダンベルを持ち上げる男女">
+      </div>
+    </div>
+
+    <div>
+      <p class="main_btn"><a href="../html/index1.html">Kazushi Sone</a></p>
+    </div>
+
+    
+    <div class="text-center">
+
+      <div class="input_title">When you have not inputted yet, please input your name</div>
+
+      <div class="input_area2">
+        <div class="input_area">
+          <p>name</p>
+          <ul>
+            <input type="text" id="key">
+          </ul>
+        </div>
+      
+      </div>
+
+      <button id="btn_input">input</button>
+    
+    </div>
+      
+  </main>
+  <script>
+    //1.Click Event
+    $('#btn_input').on('click', function(){
+      cont key =$('#key').val();
+      localStorage.setItem(key);
+      //一覧表示に追加
+      cost html = '<tr><th>'+key+'</tr></th>'
+      $('#何か').append(html);
+    }
+
+
+  </script>
+  
+</body>
+</html>
